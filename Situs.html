@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Short</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+    background-image: url('data:image/png;base64,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');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.ibb.co.com/GnMFCxg/img.webp" alt="Logo" class="logo">
+        <h2>Username:  <a href="https://i.ibb.co.com/Xs8qqhY/download.jpg">TarnaWijaya</a></h2>
+        <a href="https://youtube.com/@apkxstore?si=SVzS08eX4-lXhv95" class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvHFxwzfoJlUjP2vU7RPbLYf7W5mqhoeOWVqwn2WDNg&s alt="Icon">YouTube</a>
+        <a href="https://vm.tiktok.com/ZS29foE6d/"class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf350niCwsz831BmgiyeyVB5fHsDdQ7xKHesUeliyysA&s alt="Icon">TikTok</a>
+        <a href="https://www.facebook.com/bytarnawijaya2010" class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6UlS8Ys_n1-chWdnaexaa3CaxW0LF7I3259KTV4VfQw&s" alt="Icon">Facebook</a>
+        <a href="https://www.instagram.com/bytarnawijaya?igsh=YzljYTk1ODg3Zg==" class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiNQBob-EWWxtV2ihXCUuPhfkGzG8LWrb1crpm8_ygbg&s" alt="Icon">Istagram</a>
+        <a href="https://x.com/TarnaWijaya_" class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdB-EbJVMxRYtNz1i4dn7jOVSfHq-002oe4w&s" alt="Icon">Twiter/X</a>
+          <div class="footer">
+            <p>&copy; 2024 <a href="https://i.ibb.co.com/Xs8qqhY/download.jpg" alt="download" border="0">Link Short</a>. Semua hak cipta dilindungi.</p>
+    </div>
+    </div>
+</body>
+</html>
