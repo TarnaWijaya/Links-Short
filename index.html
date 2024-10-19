@@ -1,0 +1,248 @@
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      animation: fadeIn 1s ease-in-out;
+      background: url('https://source.unsplash.com/8k') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .btn {
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+      background-color: #1a202c;
+      color: #fbbf24;
+    }
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .btn i {
+      transition: transform 0.3s;
+    }
+    .btn:hover i {
+      transform: rotate(360deg);
+    }
+    .profile-img {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .profile-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(10px);
+      width: 350px;
+      padding: 20px;
+      animation: slideIn 1s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 3rem;
+      left: 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 20;
+      animation: fadeIn 0.3s ease-in-out;
+      backdrop-filter: blur(10px);
+    }
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      transition: background-color 0.3s;
+    }
+    .dropdown a:hover {
+      background-color: #f6d365;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    #text-display {
+      animation: slideIn 0.3s ease-in-out, slideOut 0.3s ease-in-out 1.7s;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideOut {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+  </style>
+</head>
+<body class="text-black">
+  <audio id="click-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
+<button class="btn bg-blue-600 text-white py-2 px-4 rounded-lg fixed top-4 right-4 flex items-center z-10" onclick="window.location.href='https://pastelink.id/#create'; playClickSound()">
+  <i class="fas fa-plus"></i>
+</button>
+<button class="btn bg-green-600 text-white py-2 px-4 rounded-lg fixed top-4 right-20 flex items-center z-10" onclick="window.location.href='index.html'; playClickSound()">
+  <i class="fas fa-home"></i>
+</button>
+  <button class="btn bg-gray-600 text-white py-2 px-4 rounded-lg fixed top-4 left-4 flex items-center z-10" onclick="playClickSound(); toggleDropdown()">
+    <i class="fas fa-cog"></i>
+  </button>
+  <div id="dropdown" class="dropdown">
+    <a href="#" onclick="playClickSound(); toggleTheme()">Tampilan Tema Gelap/Terang</a>
+    <a href="https://pastelink.id/#create" onclick="playClickSound(); showText('Kreatif Blog')">Kreatif Blog</a>
+    <a href="https://saweria.co/ApkXStore" onclick="playClickSound(); showText('Beli Kopi')">Beli Kopi</a>
+    <a href="https://wa.me/message/UYPM2Q2UEML2C1" onclick="playClickSound(); showText('Hubungi Kami')">Hubungi Kami</a>
+    <a href="bin.txt" onclick="playClickSound(); showText('Tentang Kami')">Tentang Kami</a>
+    <a href="#" onclick="playClickSound(); toggleDropdown()">Kembali</a>
+  </div>
+  <div class="card">
+    <div class="flex justify-center mb-4">
+      <img alt="Profile picture of a person with a futuristic design" class="profile-img rounded-full w-24 h-24" height="100" src="https://storage.googleapis.com/a1aa/image/A2K6r2FFkqKmFRvsWniySaJR9B2PQXCO9d16NZjRg4uPcE6E.jpg" width="100"/>
+    </div>
+    <div class="text-center">
+      <p class="text-lg font-semibold">
+        Username:
+        <a class="text-blue-600 hover:underline" href="https://i.ibb.co.com/Xs8qqhY/download.jpg">
+          TarnaWijaya
+        </a>
+      </p>
+      <p class="text-sm text-gray-600">
+        Sebuah developer kecil
+      </p>
+    </div>
+    <div class="mt-4 space-y-2">
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="mailto:tarnaindramayuu@gmail.com" onclick="playClickSound()">
+        <i class="fas fa-envelope mr-2"></i>
+        Gmail
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://chat.whatsapp.com/Jn1SawyrqxsBAC2Lqi5tqe" onclick="playClickSound()">
+        <i class="fab fa-whatsapp mr-2"></i>
+        Grup WhatsApp Gabut
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://youtube.com/@xtarnawijaya?si=a6OS1_eP4lACfStr" onclick="playClickSound()">
+        <i class="fab fa-youtube mr-2"></i>
+        YouTube
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://www.tiktok.com/@axs_tarna" onclick="playClickSound()">
+        <i class="fab fa-tiktok mr-2"></i>
+        TikTok
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://www.facebook.com/bytarnawijaya2010" onclick="playClickSound()">
+        <i class="fab fa-facebook mr-2"></i>
+        Facebook
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://www.instagram.com/bytarnawijaya?igsh=YzljYTk1ODg3Zg==" onclick="playClickSound()">
+        <i class="fab fa-instagram mr-2"></i>
+        Istagram
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://x.com/TarnaWijaya_" onclick="playClickSound()">
+        <i class="fab fa-twitter mr-2"></i>
+        Twitter/X
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://saweria.co/ApkXStore" onclick="playClickSound()">
+        <i class="fas fa-donate mr-2"></i>
+        Donate/Saweria
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://wa.me/message/UYPM2Q2UEML2C1" onclick="playClickSound()">
+        <i class="fab fa-whatsapp mr-2"></i>
+        WhatsApp Chat
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://t.me/TarnaWijaya" onclick="playClickSound()">
+        <i class="fab fa-telegram mr-2"></i>
+        Telegram Chat
+      </a>
+    </div>
+    <div class="text-center mt-4 text-sm text-gray-600">
+      © 2024
+      <a class="text-blue-600 hover:underline" href="#">
+        Link Short
+      </a>
+      . Semua hak cipta dilindungi.
+    </div>
+  </div>
+  <div id="text-display" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black py-2 px-4 rounded-lg shadow-lg hidden"></div>
+  <script>
+    function playClickSound() {
+      document.getElementById('click-sound').play();
+    }
+
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showText(text) {
+      const textDisplay = document.getElementById('text-display');
+      textDisplay.innerText = text;
+      textDisplay.classList.remove('hidden');
+      setTimeout(() => {
+        textDisplay.classList.add('hidden');
+      }, 2000);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('bg-gray-800');
+      document.body.classList.toggle('bg-gradient-to-r');
+      document.body.classList.toggle('from-black-400');
+      document.body.classList.toggle('to-black-500');
+      document.body.classList.toggle('text-white');
+      document.body.classList.toggle('text-black');
+    }
+  </script>
+</body>
+</html>
