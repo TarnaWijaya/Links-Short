@@ -15,6 +15,16 @@
       min-height: 100vh;
       margin: 0;
     }
+    .bg-light {
+    background-image: url('light-theme-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    .bg-dark {
+    background-image: url('dark-theme-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -235,15 +245,16 @@
         textDisplay.classList.add('hidden');
       }, 2000);
     }
-
     function toggleTheme() {
-      document.body.classList.toggle('bg-gray-800');
-      document.body.classList.toggle('bg-gradient-to-r');
-      document.body.classList.toggle('from-black-400');
-      document.body.classList.toggle('to-black-500');
-      document.body.classList.toggle('text-white');
-      document.body.classList.toggle('text-black');
+    const body = document.body;
+    if (body.classList.contains('bg-light')) {
+        body.classList.remove('bg-light');
+        body.classList.add('bg-dark');
+    } else {
+        body.classList.remove('bg-dark');
+        body.classList.add('bg-light');
     }
+}
   </script>
 </body>
 </html>
