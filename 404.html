@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link rel="icon" href="https://i.ibb.co.com/Jx8qNZJ/IMG-20241002-193053.webp" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      animation: fadeIn 1s ease-in-out;
+      background: url('https://storage.googleapis.com/a1aa/image/t6f6zavulF1CDCdA8CacCIdwgvem9s3UPvhukRMNa8opMaoTA.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .btn {
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="text-center">
+    <h1 class="text-6xl font-bold mb-4">404</h1>
+    <p class="text-xl mb-6">Halaman yang Anda cari tidak ditemukan.</p>
+    <button class="btn bg-blue-600 text-white py-2 px-4 rounded-lg flex items-center justify-center" onclick="window.location.href='index.html'">
+      <i class="fas fa-home mr-2"></i>
+      Kembali ke Beranda
+    </button>
+  </div>
+  <script>
+    function playClickSound() {
+      const audio = new Audio('https://www.soundjay.com/button/sounds/button-16.mp3');
+      audio.play();
+    }
+  </script>
+</body>
+</html>
