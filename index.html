@@ -14,6 +14,7 @@
       justify-content: center;
       min-height: 100vh;
       margin: 0;
+      transition: background-color 0.5s, color 0.5s;
     }
     @keyframes fadeIn {
       from {
@@ -35,12 +36,6 @@
     .btn:active {
       transform: translateY(0);
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
-    .btn i {
-      transition: transform 0.3s;
-    }
-    .btn:hover i {
-      transform: rotate(360deg);
     }
     .profile-img {
       transition: transform 0.3s, box-shadow 0.3s;
@@ -110,16 +105,6 @@
     #text-display {
       animation: slideIn 0.3s ease-in-out, slideOut 0.3s ease-in-out 1.7s;
     }
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
     @keyframes slideOut {
       from {
         opacity: 1;
@@ -134,12 +119,12 @@
 </head>
 <body class="text-black">
   <audio id="click-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
-<button class="btn bg-blue-600 text-white py-2 px-4 rounded-lg fixed top-4 right-4 flex items-center z-10" onclick="window.location.href='https://pastelink.id/#create'; playClickSound()">
-  <i class="fas fa-plus"></i>
-</button>
-<button class="btn bg-green-600 text-white py-2 px-4 rounded-lg fixed top-4 right-20 flex items-center z-10" onclick="window.location.href='index.html'; playClickSound()">
-  <i class="fas fa-home"></i>
-</button>
+  <button class="btn bg-blue-600 text-white py-2 px-4 rounded-lg fixed top-4 right-4 flex items-center z-10" onclick="window.location.href='https://pastelink.id/#create'; playClickSound()">
+    <i class="fas fa-plus"></i>
+  </button>
+  <button class="btn bg-green-600 text-white py-2 px-4 rounded-lg fixed top-4 right-20 flex items-center z-10" onclick="window.location.href='index.html'; playClickSound()">
+    <i class="fas fa-home"></i>
+  </button>
   <button class="btn bg-gray-600 text-white py-2 px-4 rounded-lg fixed top-4 left-4 flex items-center z-10" onclick="playClickSound(); toggleDropdown()">
     <i class="fas fa-cog"></i>
   </button>
@@ -153,7 +138,7 @@
   </div>
   <div class="card">
     <div class="flex justify-center mb-4">
-      <img alt="Profile picture of a person with a futuristic design" class="profile-img rounded-full w-24 h-24" height="100" src="https://i.ibb.co.com/Jx8qNZJ/IMG-20241002-193053.webp" width="100"/>
+      <img alt="Profile picture" class="profile-img rounded-full w-24 h-24" height="100" src="https://i.ibb.co.com/Jx8qNZJ/IMG-20241002-193053.webp" width="100"/>
     </div>
     <div class="text-center">
       <p class="text-lg font-semibold">
@@ -170,42 +155,6 @@
       <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="mailto:tarnaindramayuu@gmail.com" onclick="playClickSound()">
         <i class="fas fa-envelope mr-2"></i>
         Gmail
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://chat.whatsapp.com/Jn1SawyrqxsBAC2Lqi5tqe" onclick="playClickSound()">
-        <i class="fab fa-whatsapp mr-2"></i>
-        Grup WhatsApp Gabut
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://youtube.com/@xtarnawijaya?si=a6OS1_eP4lACfStr" onclick="playClickSound()">
-        <i class="fab fa-youtube mr-2"></i>
-        YouTube
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://www.tiktok.com/@axs_tarna" onclick="playClickSound()">
-        <i class="fab fa-tiktok mr-2"></i>
-        TikTok
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://www.facebook.com/bytarnawijaya2010" onclick="playClickSound()">
-        <i class="fab fa-facebook mr-2"></i>
-        Facebook
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://www.instagram.com/bytarnawijaya?igsh=YzljYTk1ODg3Zg==" onclick="playClickSound()">
-        <i class="fab fa-instagram mr-2"></i>
-        Istagram
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://x.com/TarnaWijaya_" onclick="playClickSound()">
-        <i class="fab fa-twitter mr-2"></i>
-        Twitter/X
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://saweria.co/ApkXStore" onclick="playClickSound()">
-        <i class="fas fa-donate mr-2"></i>
-        Donate/Saweria
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://wa.me/message/UYPM2Q2UEML2C1" onclick="playClickSound()">
-        <i class="fab fa-whatsapp mr-2"></i>
-        WhatsApp Chat
-      </a>
-      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://t.me/TarnaWijaya" onclick="playClickSound()">
-        <i class="fab fa-telegram mr-2"></i>
-        Telegram Chat
       </a>
     </div>
     <div class="text-center mt-4 text-sm text-gray-600">
