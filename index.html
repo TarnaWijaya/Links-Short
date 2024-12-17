@@ -143,10 +143,16 @@
         opacity: 0;
         transform: translateY(10px);
       }
-    }       .floating-button {
+    }
+     .floating-button-container {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .floating-button {
             background-color: transparent;
             border: none;
             border-radius: 50%;
@@ -154,7 +160,6 @@
             height: 60px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -171,11 +176,11 @@
             object-fit: cover;
             border-radius: 50%;
         }
-        .floating-button span {
+
+        .button-text {
             margin-top: 8px;
-            font-size: 12px;
+            font-size: 14px;
             color: #333;
-            text-align: center;
         }
   </style>
 </head>
@@ -301,11 +306,12 @@
       </a>
       . Semua hak cipta dilindungi.
     </div>
-  </div>
-   <a href="https://tarzai.vercel.app" class="floating-button" target="_blank" rel="noopener noreferrer">
-        <img src="https://i.ibb.co.com/Z8c6crL/pp.webp" alt="Tombol Gambar">
-        <span>Buka Halaman</span>
-    </a>
+  </div> <div class="floating-button-container">
+        <a href="https://tarzai.vercel.app" class="floating-button" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ibb.co.com/Z8c6crL/pp.webp" alt="Tombol Gambar">
+        </a>
+        <div class="button-text">Buka Halaman</div>
+
   <div id="text-display" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black py-2 px-4 rounded-lg shadow-lg hidden"></div>
   <script>
     function playClickSound() {
